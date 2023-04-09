@@ -1,0 +1,19 @@
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#searchHistory ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #searchHistory{
+    max-height: 150px;
+    overflow-y: scroll;
+    cursor: pointer;
+    /* width: 93.5%; */
+  }
