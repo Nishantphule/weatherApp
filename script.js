@@ -33,7 +33,7 @@ function updateSearchHistory() {
   localStorage.setItem("historyData", JSON.stringify(historyData));
   historyData.forEach(element => {
     const listItem = document.createElement("li")
-    listItem.classList += "list-group-item"
+    listItem.classList += "list-group-item list-group-item-action"
     listItem.innerHTML = element
     listItem.addEventListener("click", (e) => {
       document.querySelector(".search-bar").value = e.target.textContent
@@ -122,7 +122,9 @@ document.querySelector(".btn").addEventListener('click', async (e) => {
       }
     }
     else {
-      window.alert("City Not Found")
+      document.querySelector("small").innerText = "Invalid City !"
+      document.querySelector("small").classList.remove("text-muted")
+      document.querySelector("small").style.color = "red"
       document.querySelector(".search-bar").value = ""
     }
   } catch (error) {
